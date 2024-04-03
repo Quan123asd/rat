@@ -442,6 +442,9 @@
 
             // Sau khi người dùng đăng nhập thành công
             localStorage.setItem("loggedInUser", user.email);
+
+            window.location.href = "1.html";
+
           })
           .catch((error) => {
             const errorCode = error.code;
