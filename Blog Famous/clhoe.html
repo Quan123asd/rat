@@ -922,11 +922,11 @@ color:  grey;    }
             <img src="/ima/333  small.png" alt="logo">
             <ul class="ulqual">
                 <div class="betterqual">
-                    <li><a href="index.html" class="navtit">Home page</a></li>
+                    <li><a href="/index.html" class="navtit">Home page</a></li>
                 </div>
                 <div class="betterqual">
                     <li class="india">
-                        <a href="blog dia diem.html" class="navtit">Best Places</a>
+                        <a href="/blog dia diem.html" class="navtit">Best Places</a>
                         <ul class="dropdown">
                             <li><a href="#">Son La</a></li>
                             <li><a href="#">Ha Giang</a></li>
@@ -937,7 +937,7 @@ color:  grey;    }
                 </div>
                 <div class="betterqual">
                     <li class="india">
-                        <a href="1.html" class="navtit">Best Foods</a>
+                        <a href="/1.html" class="navtit">Best Foods</a>
                         <ul class="dropdown">
                             <li><a href="#">Street Food</a></li>
                             <li><a href="#">Popoular Food</a></li>
@@ -949,7 +949,7 @@ color:  grey;    }
                 </div>
                 <div class="betterqual">
                     <li class="india">
-                        <a href="environment.html" class="navtit">Protect Environment</a>
+                        <a href="/environment.html" class="navtit">Protect Environment</a>
                         <ul class="dropdown">
                             <li><a href="#">Why to do?</a></li>
                             <li><a href="#">How to do?</a></li>
@@ -969,8 +969,8 @@ color:  grey;    }
                         </ul>
                     </li>
                 </div>
-                <li><button id="login" onclick="login()"><a href="./signnug.html">Log In</a> | <a
-                            href="./sugnnew.html">Sign
+                <li><button id="login" onclick="login()"><a href="/signnug.html">Log In</a> | <a
+                            href="/sugnnew.html">Sign
                             Up</a></button></li>
                 <p id="userGreeting" style="display: none"></p>
                 <button id="logout" style="display: none">Log Out</button>
@@ -1174,6 +1174,8 @@ color:  grey;    }
     });
 
     document.addEventListener("DOMContentLoaded", () => {
+        checkLocalStorage();
+
         const toggleButton = document.querySelector('.toggle-button');
         const showButton = document.querySelector('.show-button');
         const chatbox = document.querySelector('.chatbox');
