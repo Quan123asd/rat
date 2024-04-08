@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" href="ima/bamboo only.png" type="image/x-icon" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap"
+    rel="stylesheet" />
+  <!-- Add Font Awesome CSS -->
+  <script src="https://kit.fontawesome.com/f9c32690d8.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  body {
+    overflow-x: hidden;
+  }
+
+  .wrapper12 {
+    width: 100%;
+    height: auto;
+    /* position: relative; */
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+
+  nav {
+    width: 100%;
+    position: fixed;
+    z-index: 69;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 2px solid #333;
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+  }
+
+  nav .logo {
+    width: 80px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .dropdown {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    top: 60px;
+    left: -20px;
+    width: 200px;
+    text-align: left;
+  }
+
+  .dropdown li {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .dropdown li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown li a:hover {
+    background-color: #f0f0f0;
+  }
+
+  .dropdown li a::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid transparent;
+    border-right-color: #333;
+    border-bottom-color: #333;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .india .betterqual:hover .dropdown {
+    display: block;
+  }
+
+  .betterqual {
+    height: 100px;
+    align-items: center;
+    display: flex;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .betterqual:hover .navtit {
+    color: white;
+  }
+
+  .betterqual:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .ulqual {
+    margin-left: 20px;
+  }
+
+  .dropdown li a:hover {
+    text-decoration: underline;
+    background-color: white;
+  }
+
+  #searching {
+    width: 180px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    list-style: none;
+    display: inline-block;
+    margin-left: 0px;
+  }
+
+  .ending {
+    background: url(https://vietnam.travel/themes/custom/vietnamtourism/images/bg-red-pattern.png) 50%;
+    background-size: 100px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+    
+  }
+
+  .phan1 .Footer a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .phan1 .Footer a:hover {
+    text-decoration: underline;
+    color: #d3b22e;
+  }
+
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    color: white;
+    line-height: 24px;
+    font-size: 15px;
+    height: 100px;
+  }
+
+  .phan2,
+  .phan3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    color: white;
+    font-size: 15px;
+    width: 180px;
+    text-align: center;
+  }
+
+  .phan2 h2,
+  .phan3 h2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .phan2,
+  .phan3 {
+    margin-right: 20px;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    list-style: none;
+    margin-right: 0px;
+  }
+
+  #emailhehe {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    list-style: none;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background-color: white;
+    margin-left: 20px;
+  }
+
+  #buttonhehe {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    transition: 0.5s;
+    margin-left: 20px;
+  }
+
+  #buttonhehe:hover {
+    background-color: #9e0b0f;
+    border: 2px solid #d3b22e;
+    color: #d3b22e;
+    box-shadow: 0 0 5px #d3b22e, 0 0 25px #d3b22e, 0 0 50px #d3b22e,
+      0 0 100px #d3b22e;
+  }
+
+  .phan3 .social li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .phan3 .social li a:hover {
+    text-decoration: none;
+    color: #d3b22e;
+  }
+
+  .diachinha {
+    margin-top: 40px;
+    margin-bottom: 39px;
+  }
+
+  .phan1 .h2about {
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+
+  .chatbox {
+    width: 300px;
+    height: 250px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: "Montserrat", sans-serif;
+    z-index: 999;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s;
+    display: block;
+  }
+
+  .chatbox h2 {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  .toggle-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .support {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #aibutton {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .aibutton {
+    display: none;
+  }
+
+  .aibutton2 {
+    display: none;
+  }
+
+  .aibutton3 {
+    display: none;
+  }
+
+  .aibutton4 {
+    display: none;
+  }
+
+  .aibutton5 {
+    display: none;
+  }
+
+  .aibutton6 {
+    display: none;
+  }
+
+  .aibutton7 {
+    display: none;
+  }
+
+  .aibutton8 {
+    display: none;
+  }
+
+  .aibutton9 {
+    display: none;
+  }
+
+  .aibutton10 {
+    display: none;
+  }
+
+  .show-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: "Montserrat", sans-serif;
+    z-index: 999;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  #login {
+    width: 180px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    list-style: none;
+    display: inline-block;
+    margin-left: 0px;
+    color: #333;
+  }
+
+  #login a:hover {
+    text-decoration: underline;
+  }
+
+  #userGreeting {
+    /* Your styles for the greeting message here */
+    color: #333;
+    /* Change the color */
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    /* Change the font-family */
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 140px;
+    position: relative;
+    /* Để sử dụng ::after pseudo-element */
+  }
+
+  #userGreeting::after {
+    content: "..";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: white;
+    /* Nền màu của văn bản */
+    padding: 0 4px;
+    /* Khoảng cách xung quanh ".." */
+  }
+
+  /* Add the class for the link color */
+  #login a,
+  #userGreeting a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  #logout {
+    width: 60px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 10px;
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+    color: #333;
+    transition: 0.4s;
+  }
+
+  #logout:hover {
+    color: white;
+    background-color: maroon;
+  }
+
+  .famouspeople {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    flex-direction: column;
+    margin: 0;
+    /* Removes default margin */
+    font-family: "Montserrat", sans-serif;
+    gap: 40px;
+    margin-bottom: -110px; /* Giảm khoảng cách dưới cùng */
+
+  }
+
+
+
+  .famouspeople .searchengine {
+    width: 500px;
+    height: 70px;
+    padding: 25px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  }
+  /* Giữ nguyên phần CSS hiện tại của bạn và thêm vào cuối file */
+
+/* Điều chỉnh kích thước cho màn hình dưới 768px */
+@media (max-width: 768px) {
+  .famouspeople .searchengine {
+    width: 80%; /* Tăng kích thước chiều rộng cho điện thoại di động và máy tính bảng */
+    margin: auto; /* Căn giữa thanh tìm kiếm */
+    padding: 15px; /* Giảm kích thước padding để phù hợp hơn */
+  }
+  .famouspeople h1 {
+    font-size: 24px; /* Giảm kích thước font chữ */
+   text-align: center; /* Đảm bảo tiêu đề được căn giữa */
+   position: absolute;
+   margin-top: -160px;
+  }
+}
+
+/* Điều chỉnh kích thước cho màn hình dưới 480px */
+@media (max-width: 480px) {
+  .famouspeople .searchengine {
+    width: 90%; /* Chiếm gần như toàn bộ chiều rộng màn hình */
+    padding: 10px; /* Giảm padding hơn nữa */
+  }
+  .famouspeople h1 {
+    font-size: 20px; /* Giảm kích thước font chữ hơn nữa cho màn hình rất nhỏ */
+  }
+}
+
+  .famouspeople2 {
+    width: 100vw;
+    min-height: 70vh; /* Sử dụng min-height thay cho height */
+    display: flex;
+    justify-content :center;
+    align-items:first baseline;
+    background-color: whitesmoke;
+    margin: 0;
+    /* Removes default margin */
+  }
+  .search-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+
+.user-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 5rem;
+  background-color: whitesmoke;
+  width: 80vw;
+
+}
+
+.card {
+  border: 1px solid black;
+  background-color: white;
+  padding: .5rem;
+  width: 200px;
+  height: 220px; /* Adjust height as needed */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Add position relative to allow absolute positioning of image */
+}
+
+.user-image {
+  width: 100%; /* Adjust image width as needed */
+  height: auto; /* To maintain aspect ratio */
+  max-height: 120px; /* Adjust max-height as needed */
+  object-fit: cover; /* Cover the entire space with the image */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  margin-top: 120px; /* Adjust margin to place text below the image */
+}
+
+.body {
+  font-size: .8rem;
+  color: #777;
+}
+
+.hide {
+  display: none;
+}
+
+
+.card > .header {
+  margin-bottom: .25rem;
+}
+
+.card > .body {
+  font-size: .8rem;
+  color: #777;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+  .famouspeople3 {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 0;
+    margin-bottom: -50px;
+    /* Removes default margin */
+  }
+
+  .famouspeople3 button {
+  padding: 10px 20px; /* Tăng padding để nút rộng hơn */
+  margin-left: 30px;
+  margin-right: 30px;
+  border: 2px solid black; /* Làm border đậm hơn một chút */
+  border-radius: 5px; /* Giữ nguyên border-radius */
+  background-color: white; /* Màu nền cho nút */
+  color: black; /* Màu chữ */
+  font-weight: bold; /* Làm chữ đậm */
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển đổi mượt mà */
+  cursor: pointer; /* Thay đổi con trỏ khi di qua nút */
+}
+
+.famouspeople3 button:hover {
+  background-color: black; /* Đổi màu nền khi hover */
+  color: white; /* Đổi màu chữ khi hover */
+  border-color: #BB450A; /* Đổi màu viền khi hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ cho nút */
+}
+
+
+  .famouspeople4 {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 0;
+    /* Removes default margin */
+  }
+</style>
+
+<body>
+  <section class="wrapper12">
+    <nav class="india">
+      <img src="ima/333  small.png" alt="logo" />
+      <ul class="ulqual">
+        <div class="betterqual">
+          <li>
+            <a href="index.html" class="navtit">Home page</a>
+          </li>
+        </div>
+        <div class="betterqual">
+          <li class="india">
+            <a href="blog dia diem.html" class="navtit">Best Places</a>
+            <ul class="dropdown">
+              <li><a href="#">Son La</a></li>
+              <li><a href="#">Ha Giang</a></li>
+              <li><a href="#">Sapa</a></li>
+              <li><a href="#">Ninh Binh</a></li>
+            </ul>
+          </li>
+        </div>
+        <div class="betterqual">
+          <li class="india">
+            <a href="1.html" class="navtit">Best Foods</a>
+            <ul class="dropdown">
+              <li><a href="#">Street Food</a></li>
+              <li><a href="#">Popoular Food</a></li>
+              <li><a href="#">Sapa</a></li>
+              <li><a href="#">Ha Giang</a></li>
+              <li><a href="#">Lai Chau</a></li>
+            </ul>
+          </li>
+        </div>
+        <div class="betterqual">
+          <li class="india">
+            <a href="environment.html" class="navtit">Protect Environment</a>
+            <ul class="dropdown">
+              <li><a href="#">Why to do?</a></li>
+              <li><a href="#">How to do?</a></li>
+              <li><a href="#">Join us now</a></li>
+              <li><a href="#">Online helps</a></li>
+            </ul>
+          </li>
+        </div>
+        <div class="betterqual">
+          <li class="india">
+            <a href="https://www.facebook.com/dangminhquan1307" class="navtit">About us</a>
+            <ul class="dropdown">
+              <li><a href="#">Our copyright</a></li>
+              <li><a href="#">Contact for work</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </li>
+        </div>
+        <li>
+          <button id="login" onclick="login()">
+            <a href="./signnug.html">Log In</a> |
+            <a href="./sugnnew.html">Sign Up</a>
+          </button>
+        </li>
+        <p id="userGreeting" style="display: none"></p>
+        <button id="logout" style="display: none">Log Out</button>
+      </ul>
+    </nav>
+  </section>
+  <div class="chatbox">
+    <button class="toggle-button">X</button>
+    <h1>Chat box</h1>
+    <div class="support">
+      <h2><span id="typing-text"></span></h2>
+      <div class="buttonforia">
+        <button id="aibutton" class="aibutton">Get started</button>
+        <button id="aibutton" class="aibutton2">Places Advices</button>
+        <button id="aibutton" class="aibutton3">Foods Advices</button>
+        <button id="aibutton" class="aibutton4">Sapa</button>
+        <button id="aibutton" class="aibutton5">Mai Chau</button>
+        <button id="aibutton" class="aibutton6">Ha Giang</button>
+        <button id="aibutton" class="aibutton7">Sapa</button>
+        <button id="aibutton" class="aibutton8">Mai Chau</button>
+        <button id="aibutton" class="aibutton9">Ha Giang</button>
+        <button id="aibutton" class="aibutton10">Go back</button>
+      </div>
+    </div>
+  </div>
+  <button class="show-button">Show Chat</button>
+  <div class="famouspeople">
+    <h1>Find your food</h1>
+    <input type="search" placeholder="Start Typing.." class="searchengine" id="search" data-search>
+  </div>
+  <div class="famouspeople2">
+    <div class="user-cards" data-user-cards-container></div>
+  <template data-user-template>
+    <div class="card">
+      <img src="" alt="User Image" class="user-image">
+      <div class="header" data-header></div>
+      <div class="body" data-body></div>
+    </div>
+  </template>
+  </div>
+  
+  <div class="famouspeople3">
+    <div class="pagination">
+      <button id="prevPage">Prev</button>
+      <span id="currentPage">1</span>
+      <button id="nextPage">Next</button>
+    </div>  </div>
+  <div class="famouspeople4">
+
+  </div>
+  <section class="ending">
+    <div class="phan1">
+      <ul class="Footer">
+        <li>
+          <h2 class="h2about">USEFUL LINKS</h2>
+        </li>
+        <li><a href="">About</a></li>
+        <li><a href="">Service</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Video</a></li>
+      </ul>
+    </div>
+    <div class="phan2">
+      <h2 style="margin-left: 20px">NEWSLETTER</h2>
+      <input type="text" name="" id="emailhehe" placeholder="Your Email Address" />
+      <button id="buttonhehe">SUBSCRIBE NOW</button>
+    </div>
+    <div class="phan3">
+      <h2>CONTACT</h2>
+      <p class="diachinha">9, Vũ Phạm Hàm, Cầu Giấy, Hà Nội, Việt Nam</p>
+      <ul class="social">
+        <li>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/?lang=vi"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/c/amd ">
+            <i class="fab fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  // Giữ các đoạn mã khác giống như trong ví dụ trước
+  checkLocalStorage(); // và các hàm khác đã được định nghĩa
+
+  let currentPage = 1;
+  const usersPerPage = 10; // Số lượng users trên mỗi trang
+  let users = [];
+  let filteredUsers = [];
+
+  const prevPageButton = document.getElementById("prevPage");
+  const nextPageButton = document.getElementById("nextPage");
+  const currentPageSpan = document.getElementById("currentPage");
+  const userCardTemplate = document.querySelector("[data-user-template]");
+  const userCardContainer = document.querySelector("[data-user-cards-container]");
+  const searchInput = document.querySelector("[data-search]");
+
+  function normalizeVietnamese(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  }
+
+  function displayUsers() {
+    const start = (currentPage - 1) * usersPerPage;
+    const end = start + usersPerPage;
+    const paginatedUsers = filteredUsers.slice(start, end);
+
+    userCardContainer.innerHTML = ""; // Xóa users hiện tại
+
+    paginatedUsers.forEach(user => {
+      const card = userCardTemplate.content.cloneNode(true).children[0];
+      const header = card.querySelector("[data-header]");
+      const body = card.querySelector("[data-body]");
+      const image = card.querySelector(".user-image");
+
+      header.textContent = user.name;
+      body.textContent = user.email;
+      image.src = user.image;
+
+      userCardContainer.append(card);
+    });
+  }
+
+  function updatePage(change) {
+    currentPage += change;
+    currentPage = Math.max(1, Math.min(currentPage, Math.ceil(filteredUsers.length / usersPerPage)));
+    currentPageSpan.textContent = currentPage.toString();
+    displayUsers();
+  }
+
+  searchInput.addEventListener("input", e => {
+    const value = normalizeVietnamese(e.target.value);
+    filteredUsers = users.filter(user => normalizeVietnamese(user.name).includes(value) || normalizeVietnamese(user.email).includes(value));
+    currentPage = 1; // Reset lại trang hiện tại về 1 sau mỗi lần tìm kiếm
+    updatePage(0); // Gọi updatePage với 0 để cập nhật hiển thị mà không thay đổi trang
+  });
+
+  prevPageButton.addEventListener("click", () => updatePage(-1));
+  nextPageButton.addEventListener("click", () => updatePage(1));
+
+  fetch("foodworld.json")
+    .then(res => res.json())
+    .then(data => {
+      users = data.map(user => {
+        return { name: user.name, email: user.email, image: user.image };
+      });
+      filteredUsers = users; // Ban đầu, danh sách lọc chính là toàn bộ danh sách người dùng
+      displayUsers(); // Hiển thị users sau khi dữ liệu được tải
+    });
+});
+
+
+  function checkLocalStorage() {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    const userGreeting = document.querySelector("#userGreeting");
+    const loginButton = document.querySelector("#login");
+    const logoutButton = document.querySelector("#logout");
+
+    // Xử lý sự kiện khi nút logout được click
+    logoutButton.addEventListener("click", function () {
+      localStorage.removeItem("loggedInUser"); // Xóa thông tin đăng nhập
+      userGreeting.style.display = "none"; // Ẩn greeting message
+      logoutButton.style.display = "none"; // Ẩn nút logout
+      loginButton.style.display = "inline-block"; // Hiển thị nút đăng nhập
+    });
+
+    if (loggedInUser) {
+      // Hiển thị thông tin người dùng đã đăng nhập
+      userGreeting.style.display = "flex";
+      userGreeting.innerHTML = `Hello, <a href="#">${loggedInUser}</a>`;
+      userGreeting.style.color = "#333";
+      logoutButton.style.display = "inline-block"; // Hiển thị nút logout
+      loginButton.style.display = "none"; // Ẩn nút đăng nhập nếu người dùng đã đăng nhập
+      console.log("runned");
+    }
+  }
+
+  const toggleButton = document.querySelector(".toggle-button");
+  const showButton = document.querySelector(".show-button");
+  const chatbox = document.querySelector(".chatbox");
+  const aibutton = document.querySelector(".aibutton");
+  const aibutton2 = document.querySelector(".aibutton2");
+  const aibutton3 = document.querySelector(".aibutton3");
+  const aibutton4 = document.querySelector(".aibutton4");
+  const aibutton5 = document.querySelector(".aibutton5");
+  const aibutton6 = document.querySelector(".aibutton6");
+  const aibutton7 = document.querySelector(".aibutton7");
+  const aibutton8 = document.querySelector(".aibutton8");
+  const aibutton9 = document.querySelector(".aibutton9");
+  const aibutton10 = document.querySelector(".aibutton10");
+
+  const typingText = document.getElementById("typing-text");
+
+  toggleButton.addEventListener("click", () => {
+    showButton.style.display = "flex";
+    chatbox.style.display = "none";
+  });
+
+  showButton.addEventListener("click", () => {
+    showButton.style.display = "none";
+    chatbox.style.display = "block";
+  });
+
+  aibutton.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "Please choose the topic that you want";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton2.style.display = "inline";
+        aibutton3.style.display = "inline";
+      }
+    }, 100);
+    aibutton.style.display = "none";
+  });
+  window.onload = function () {
+    typingText.innerHTML = "";
+    const text = "Hello, how can I help you?";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton.style.display = "inline";
+      }
+    }, 100);
+  };
+  aibutton2.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "Please choose a specific location";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton4.style.display = "inline";
+        aibutton5.style.display = "inline";
+        aibutton6.style.display = "inline";
+      }
+    }, 100);
+    aibutton2.style.display = "none";
+    aibutton3.style.display = "none";
+  });
+  aibutton3.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "Please choose a specific cuisine";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton7.style.display = "inline";
+        aibutton8.style.display = "inline";
+        aibutton9.style.display = "inline";
+      }
+    }, 100);
+    aibutton2.style.display = "none";
+    aibutton3.style.display = "none";
+  });
+  aibutton4.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "For Sapa, I recommend visiting Fansipan Mountain";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton10.style.display = "inline";
+      }
+    }, 100);
+    aibutton4.style.display = "none";
+    aibutton5.style.display = "none";
+    aibutton6.style.display = "none";
+  });
+  aibutton5.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "For Mai Chau, I recommend visiting Pom Coong Village";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton10.style.display = "inline";
+      }
+    }, 100);
+    aibutton4.style.display = "none";
+    aibutton5.style.display = "none";
+    aibutton6.style.display = "none";
+  });
+  aibutton6.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text =
+      "For Ha Giang, I recommend visiting Dong Van Karst Plateau Geopark";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton10.style.display = "inline";
+      }
+    }, 100);
+    aibutton4.style.display = "none";
+    aibutton5.style.display = "none";
+    aibutton6.style.display = "none";
+  });
+  aibutton7.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "For Sapa, I recommend trying Wild Buffalo Meat";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton10.style.display = "inline";
+      }
+    }, 100);
+    aibutton7.style.display = "none";
+    aibutton8.style.display = "none";
+    aibutton9.style.display = "none";
+  });
+  aibutton8.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "For Mai Chau, I recommend trying Fried Cicadas";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton10.style.display = "inline";
+      }
+    }, 100);
+    aibutton7.style.display = "none";
+    aibutton8.style.display = "none";
+    aibutton9.style.display = "none";
+  });
+  aibutton9.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "For Ha Giang, I recommend trying Nam Pia";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton10.style.display = "inline";
+      }
+    }, 100);
+    aibutton7.style.display = "none";
+    aibutton8.style.display = "none";
+    aibutton9.style.display = "none";
+  });
+  aibutton10.addEventListener("click", () => {
+    typingText.innerHTML = "";
+    const text = "Hello, how can I help you?";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      typingText.innerHTML += text[index];
+      index++;
+      if (index >= text.length) {
+        clearInterval(typingInterval);
+        aibutton.style.display = "inline";
+      }
+    }, 100);
+    aibutton10.style.display = "none";
+  });
+
+
+  //add some json features
+
+  function normalizeVietnamese(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+// Sử dụng hàm này để chuẩn hóa cả giá trị nhập vào từ người dùng và chuỗi bạn đang so sánh
+
+  const userCardTemplate = document.querySelector("[data-user-template]")
+const userCardContainer = document.querySelector("[data-user-cards-container]")
+const searchInput = document.querySelector("[data-search]")
+
+let users = []
+
+searchInput.addEventListener("input", e => {
+  const value = normalizeVietnamese(e.target.value.toLowerCase());
+  users.forEach(user => {
+    const isVisible =
+      normalizeVietnamese(user.name.toLowerCase()).includes(value) ||
+      normalizeVietnamese(user.email.toLowerCase()).includes(value);
+    user.element.classList.toggle("hide", !isVisible);
+  });
+});
+
+
+fetch("foodworld.json")
+  .then(res => res.json())
+  .then(data => {
+    users = data.map(user => {
+      const card = userCardTemplate.content.cloneNode(true).children[0]
+      const header = card.querySelector("[data-header]")
+      const body = card.querySelector("[data-body]")
+      const image = card.querySelector(".user-image"); // Thêm dòng này để chọn phần tử img
+
+      header.textContent = user.name
+      body.textContent = user.email
+      image.src = user.image; // Thêm dòng này để đặt URL của ảnh
+
+      userCardContainer.append(card)
+      return { name: user.name, email: user.email, element: card }
+    })
+  })
+</script>
+
+</html>
