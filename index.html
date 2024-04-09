@@ -954,7 +954,157 @@
         margin-top: -5px;
         margin-bottom: 10px;
     }
+    @import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
 
+.Tiktok {
+  height: 100vh;
+  background: #eaeaea;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+
+.container-newTikTok {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #f5f5f5;
+  box-shadow: 0 30px 50px #dbdbdb;
+}
+
+.container-newTikTok .slide-newTikTok .item-newTikTok {
+  width: 165px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.slide-newTikTok .item-newTikTok:nth-child(1),
+.slide-newTikTok .item-newTikTok:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-newTikTok .item-newTikTok:nth-child(3) {
+  left: 58%;
+}
+
+.slide-newTikTok .item-newTikTok:nth-child(4) {
+  left: calc(58% + 210px);
+}
+
+.slide-newTikTok .item-newTikTok:nth-child(5) {
+  left: calc(58% + 430px);
+}
+
+.slide-newTikTok .item-newTikTok:nth-child(n + 6) {
+  left: calc(58% + 650px);
+  opacity: 0;
+}
+
+.item-newTikTok .content-newTikTok {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  min-width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); /* Enhanced shadow for text */
+}
+
+.slide-newTikTok .item-newTikTok:nth-child(2) .content-newTikTok {
+  display: block;
+}
+
+.content-newTikTok .name-newTikTok {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate-newTikTok 1s ease-in-out 1 forwards;
+}
+
+.content-newTikTok .des-newTikTok {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate-newTikTok 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content-newTikTok button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate-newTikTok 1s ease-in-out 0.6s 1 forwards;
+  background-color: transparent;
+  color: white;
+  border: 1.5px white solid;
+  width: 150px;
+  height: 65px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.content-newTikTok button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1.5px black solid;
+}
+
+@keyframes animate-newTikTok {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+.button-newTikTok {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.button-newTikTok button {
+  width: 60px;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+  background-color: white;
+
+}
+
+.button-newTikTok button:hover {
+  background: #ababab;
+  color: #fff;
+
+}
 
     </style>
 </head>
@@ -1011,6 +1161,64 @@
 
     </div>
     <button class="show-button">Show Chat</button>
+
+    <section class="Tiktok">
+    <div class="container-newTikTok">
+        <div class="slide-newTikTok">
+            <div class="item-newTikTok" style="background-image: url(https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-son-la-cover.jpeg)">
+                <div class="content-newTikTok">
+                    <div class="name-newTikTok">Sơn La</div>
+                    <div class="des-newTikTok">A serene escape into nature's embrace.</div>
+                    <button onclick="window.location.href='cities/sonla.html';">See More</button>
+                </div>
+            </div>
+            <div class="item-newTikTok" style="background-image: url(https://vnpay.vn/s1/statics.vnpay.vn/2023/10/06vy56tjmosc1698659199098.jpg)">
+                <div class="content-newTikTok">
+                    <div class="name-newTikTok">Ninh Bình</div>
+                    <div class="des-newTikTok">Stunning karst landscapes and historic temples.</div>
+                    <button onclick="window.location.href='cities/ninhbinh.html';">See More</button>
+                </div>
+            </div>
+            <div class="item-newTikTok" style="background-image: url(https://vcdn1-dulich.vnecdn.net/2022/04/18/dulichSaPa-1650268886-1480-1650277620.png?w=0&h=0&q=100&dpr=2&fit=crop&s=JTUw8njZ_Glkqf1itzjObg)">
+                <div class="content-newTikTok">
+                    <div class="name-newTikTok">Sapa</div>
+                    <div class="des-newTikTok">Breathtaking mountains, rich cultural heritage.</div>
+                    <button onclick="window.location.href='cities/sapa.html';">See More</button>
+                </div>
+            </div>
+            <div class="item-newTikTok" style="background-image: url(https://gcs.tripi.vn/public-tripi/tripi-feed/img/474073vrs/hinh-nen-ha-noi-ngay-nay_054023901.jpg)">
+                <div class="content-newTikTok">
+                    <div class="name-newTikTok">Hà Nội</div>
+                    <div class="des-newTikTok">The heart of Vietnamese culture and history.</div>
+                    <button onclick="window.location.href='cities/hanoi.html';">See More</button>
+                </div>
+            </div>
+            <div class="item-newTikTok" style="background-image: url(https://daiichitravel.com/uploads/news_img/Sapaa1.jpg)">
+                <div class="content-newTikTok">
+                    <div class="name-newTikTok">Hà Giang</div>
+                    <div class="des-newTikTok">Rugged landscapes, home to diverse ethnic groups.</div>
+                    <button onclick="window.location.href='cities/hagiang.html';">See More</button>
+                </div>
+            </div>
+            <div class="item-newTikTok" style="background-image: url(https://a.cdn-hotels.com/gdcs/production77/d1902/21336448-81d8-4643-a1b9-1545d08172de.jpg)">
+                <div class="content-newTikTok">
+                    <div class="name-newTikTok">Ha Long Bay</div>
+                    <div class="des-newTikTok">Explore the undiscovered, islands of surprises.</div>
+                    <button onclick="window.location.href='cities/halongbay.html';">See More</button>
+                </div>
+            </div>
+        </div>
+        <div class="button-newTikTok">
+            <button class="prev-newTikTok">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="next-newTikTok">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
     <!--blog-section============================================================================-->
     <section id="blog">
         <div class="list-container">
@@ -1420,6 +1628,21 @@
             aibutton10.style.display = 'none';
 
         });
+    });
+
+    const nextNewTikTok = document.querySelector(".next-newTikTok");
+    const prevNewTikTok = document.querySelector(".prev-newTikTok");
+
+    nextNewTikTok.addEventListener("click", () => {
+      const items = document.querySelectorAll(".item-newTikTok");
+      document.querySelector(".slide-newTikTok").appendChild(items[0]);
+    });
+
+    prevNewTikTok.addEventListener("click", () => {
+      const items = document.querySelectorAll(".item-newTikTok");
+      document
+        .querySelector(".slide-newTikTok")
+        .prepend(items[items.length - 1]);
     });
 </script>
 
